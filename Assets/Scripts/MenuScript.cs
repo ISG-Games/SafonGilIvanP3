@@ -15,7 +15,7 @@ public class MenuScript : MonoBehaviour
     public static int levelActual;
 
     // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
         levelActual=0;
         AllLevels.SetActive(false);

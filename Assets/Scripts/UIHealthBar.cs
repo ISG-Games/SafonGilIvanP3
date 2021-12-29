@@ -14,7 +14,7 @@ public class UIHealthBar : MonoBehaviour
     {
         instance = this;
     }
-    void OnEnable(){
+    void Start(){
         originalSize=166.2825f;
         SetValue(0);
     }

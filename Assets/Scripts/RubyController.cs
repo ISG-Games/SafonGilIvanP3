@@ -25,12 +25,17 @@ public class RubyController : MonoBehaviour
     public bool muerto;
     public GameObject GameOver;
 
+    //Tiempo
+    public static float tiempoActual;
+    public int tiempoMax;
+    public GameObject BarraTiempo;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        muerto=false;
+        tiempoActual=0;
     }
 
     void OnEnable(){
@@ -47,6 +52,11 @@ public class RubyController : MonoBehaviour
     {
         if(muerto==true){
             GameOver.SetActive(true);
+        }
+
+        tiempoActual+=Time.deltaTime;
+        if (tiempoActual>=tiempoMax){
+            muerto=true;
         }
 
         float horizontal = Input.GetAxis("Horizontal");
