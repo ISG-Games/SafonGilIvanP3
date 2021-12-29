@@ -40,13 +40,13 @@
      <Compile Include="Assets\Scripts\UIHealthBar.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreScript.cs" />
+     <Compile Include="Assets\Scripts\WinScript.cs" />
      <Compile Include="Assets\Scripts\HealthCollectible.cs" />
+     <Compile Include="Assets\Scripts\RanaScript.cs" />
+     <Compile Include="Assets\Scripts\GameOverScript.cs" />
      <Compile Include="Assets\Scripts\Enemy1Controller.cs" />
      <Compile Include="Assets\Scripts\PinchosDaño.cs" />
-     <Compile Include="Assets\Scripts\GameOverScript.cs" />
-     <Compile Include="Assets\Scripts\ScoreScript.cs" />
-     <Compile Include="Assets\Scripts\RanaScript.cs" />
-     <Compile Include="Assets\Scripts\WinScript.cs" />
      <None Include="Assets\2DBeginner_Third-PartyNotice.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

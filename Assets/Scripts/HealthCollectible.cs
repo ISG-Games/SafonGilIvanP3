@@ -12,6 +12,7 @@ public class HealthCollectible : MonoBehaviour
          {
             Instantiate(Effect, transform.position, Quaternion.identity);
             ScoreScript.cScore+=1;
+            UIHealthBar.instance.SetValue((float)ScoreScript.cScore / (float)10);
             Destroy(gameObject);
         }
     }

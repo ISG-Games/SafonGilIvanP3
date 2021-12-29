@@ -14,16 +14,15 @@ public class UIHealthBar : MonoBehaviour
     {
         instance = this;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        originalSize = mask.rectTransform.rect.width;
+    void OnEnable(){
+        originalSize=166.2825f;
+        SetValue(0);
     }
 
     public void SetValue(float value)
     {				      
         mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalSize * value);
+        print(value);
     }
 
     // Update is called once per frame

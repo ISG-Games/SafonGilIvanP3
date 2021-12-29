@@ -76,21 +76,6 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    // public void ChangeHealth(int amount)
-    // {
-    //     if (amount < 0)
-    //     {
-    //         if (isInvincible){
-    //             return;}
-    //         Instantiate(particlesDaño, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
-    //         isInvincible = true;
-    //         invincibleTimer = timeInvincible;
-    //         animator.SetTrigger("Hit");
-    //     }
-    //     currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-    //     UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
-    // }
-
     void Launch()
     {
          GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
