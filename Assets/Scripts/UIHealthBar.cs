@@ -15,7 +15,7 @@ public class UIHealthBar : MonoBehaviour
         instance = this;
     }
     void Start(){
-        originalSize=166.2825f;
+        originalSize = mask.rectTransform.rect.width;
         SetValue(0);
     }
 

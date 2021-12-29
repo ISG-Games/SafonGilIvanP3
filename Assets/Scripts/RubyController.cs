@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RubyController : MonoBehaviour
 {
@@ -28,7 +29,8 @@ public class RubyController : MonoBehaviour
     //Tiempo
     public static float tiempoActual;
     public int tiempoMax;
-    public GameObject BarraTiempo;
+    public Image BarraTiempoMask;
+    float originalSize;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,8 @@ public class RubyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         tiempoActual=0;
+
+        originalSize = BarraTiempoMask.rectTransform.rect.width;
     }
 
     void OnEnable(){
@@ -50,15 +54,19 @@ public class RubyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Muerto?
         if(muerto==true){
             GameOver.SetActive(true);
         }
 
+        //Tiempo
         tiempoActual+=Time.deltaTime;
-        if (tiempoActual>=tiempoMax){
+        if (tiempoActual>=tiempoMax+0.5f){//tiempoMax+0.5 para que tengas medio segundo más de tiempo del que crees
             muerto=true;
         }
+        SetValueTimeBar( (float)(tiempoMax-tiempoActual) / (float)tiempoMax );
 
+        //Movimiento
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -80,6 +88,7 @@ public class RubyController : MonoBehaviour
         
         rigidbody2d.MovePosition(position);
 
+        //Disparar
         if(level3o4 && Input.GetKeyDown(KeyCode.C))
         {
             Launch();
@@ -94,5 +103,10 @@ public class RubyController : MonoBehaviour
          projectile.Launch(lookDirection, 300);
 
          animator.SetTrigger("Launch");
+    }
+
+    void SetValueTimeBar(float value)
+    {				      
+        BarraTiempoMask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalSize * value);
     }
 }

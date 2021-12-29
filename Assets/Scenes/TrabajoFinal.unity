@@ -9216,7 +9216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -289.4, y: 62.4}
+  m_AnchoredPosition: {x: -41, y: 165}
   m_SizeDelta: {x: 189.868, y: 87.4017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &415781614
@@ -19925,6 +19925,10 @@ PrefabInstance:
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 295725347}
+    - target: {fileID: 7117490127118145261, guid: ac667ea1b0c2dc047a7baab380da3147, type: 3}
+      propertyPath: BarraTiempoMask
+      value: 
+      objectReference: {fileID: 1885332662}
     - target: {fileID: 7117490127118145262, guid: ac667ea1b0c2dc047a7baab380da3147, type: 3}
       propertyPath: m_Name
       value: Ruby
@@ -22387,7 +22391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07921587, y: 0.135}
   m_AnchorMax: {x: 0.3897841, y: 0.9324799}
-  m_AnchoredPosition: {x: 0.6000061, y: -0.3445034}
+  m_AnchoredPosition: {x: 2.4767, y: 0.38608932}
   m_SizeDelta: {x: 2.497589, y: -0.77220154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739355018
@@ -22410,7 +22414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e15de6f8d935253448ee4e7709bd216c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00e89d1057578a342b22583144a5ee03, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23666,7 +23670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -270.2, y: 165.1}
+  m_AnchoredPosition: {x: -270, y: 165}
   m_SizeDelta: {x: 258.4784, y: 118.9851}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003291249
