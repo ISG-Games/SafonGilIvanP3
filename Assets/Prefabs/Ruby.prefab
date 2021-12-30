@@ -98,12 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4370e3f9f10c502469c33cd2ee97937d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
+  speed: 5
   projectilePrefab: {fileID: 4330501944443850908, guid: e0fc72fbf73ee4d46937a2b8dda714ea, type: 3}
   "particlesDa\xF1o": {fileID: 9021409862947430789, guid: 444b1efef5c1bed44865e486c0e32c23, type: 3}
   muerto: 0
   GameOver: {fileID: 0}
-  tiempoMax: 30
+  tiempoMax: 28
   BarraTiempoMask: {fileID: 0}
 --- !u!50 &2766805880148082730
 Rigidbody2D:

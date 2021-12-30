@@ -11,7 +11,6 @@ public class ScoreScript : MonoBehaviour
     int score1;
     int score2;
     int score3;
-    int score4;
     public Text TscoreTotal;
 
     // Start is called before the first frame update
@@ -23,13 +22,12 @@ public class ScoreScript : MonoBehaviour
         score1=PlayerPrefs.GetInt("Score1P");
         score2=PlayerPrefs.GetInt("Score2P");
         score3=PlayerPrefs.GetInt("Score3P");
-        score4=PlayerPrefs.GetInt("Score4P");
     }
 
     // Update is called once per frame
     void Update()
     {
-        TscoreTotal.text="Score: "+scoreTotal+"/40";
+        TscoreTotal.text="Score: "+scoreTotal+"/30";
         if (winScoreInt==1){
             Level1Record();
             winScoreInt=0;
@@ -42,17 +40,13 @@ public class ScoreScript : MonoBehaviour
             Level3Record();
             winScoreInt=0;
         }
-        if (winScoreInt==4){
-            Level4Record();
-            winScoreInt=0;
-        }
     }
 
     public void Level1Record(){
         if (cScore>score1){
             PlayerPrefs.SetInt("Score1P",cScore);
             score1=PlayerPrefs.GetInt("Score1P");
-            scoreTotal=score1+score2+score3+score4;
+            scoreTotal=score1+score2+score3;
             PlayerPrefs.SetInt("ScoreTotalP",scoreTotal);
             cScore=0;
         }
@@ -61,7 +55,7 @@ public class ScoreScript : MonoBehaviour
         if (cScore>score2){
             PlayerPrefs.SetInt("Score2P",cScore);
             score2=PlayerPrefs.GetInt("Score2P");
-            scoreTotal=score1+score2+score3+score4;
+            scoreTotal=score1+score2+score3;
             PlayerPrefs.SetInt("ScoreTotalP",scoreTotal);
             cScore=0;
         }
@@ -70,16 +64,7 @@ public class ScoreScript : MonoBehaviour
         if (cScore>score3){
             PlayerPrefs.SetInt("Score3P",cScore);
             score3=PlayerPrefs.GetInt("Score3P");
-            scoreTotal=score1+score2+score3+score4;
-            PlayerPrefs.SetInt("ScoreTotalP",scoreTotal);
-            cScore=0;
-        }
-    }
-    public void Level4Record(){
-        if (cScore>score4){
-            PlayerPrefs.SetInt("Score4P",cScore);
-            score4=PlayerPrefs.GetInt("Score4P");
-            scoreTotal=score1+score2+score3+score4;
+            scoreTotal=score1+score2+score3;
             PlayerPrefs.SetInt("ScoreTotalP",scoreTotal);
             cScore=0;
         }

@@ -8,7 +8,6 @@ public class MenuScript : MonoBehaviour
     public GameObject Level1;
     public GameObject Level2;
     public GameObject Level3;
-    public GameObject Level4;
     public GameObject Creditos;
     public GameObject HUD;
 
@@ -22,7 +21,6 @@ public class MenuScript : MonoBehaviour
         Level1.SetActive(false);
         Level2.SetActive(false);
         Level3.SetActive(false);
-        Level4.SetActive(false);
         Creditos.SetActive(false);
         HUD.SetActive(false);
     }
@@ -42,10 +40,6 @@ public class MenuScript : MonoBehaviour
             Level3.SetActive(true);
             EntrarACualquierNivel();
         }
-        if (levelActual==4){
-            Level4.SetActive(true);
-            EntrarACualquierNivel();
-        }
     }
 
     public void IrALevel1(){
@@ -56,9 +50,6 @@ public class MenuScript : MonoBehaviour
     }
     public void IrALevel3(){
         levelActual=3;
-    }
-    public void IrALevel4(){
-        levelActual=4;
     }
     public void IrACredits(){
         Creditos.SetActive(true);

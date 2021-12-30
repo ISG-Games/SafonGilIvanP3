@@ -26,7 +26,7 @@ public class Enemy1Controller : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(!broken)
         {
@@ -40,18 +40,27 @@ public class Enemy1Controller : MonoBehaviour
             timer = changeTime;
         }
         
-        
         Vector2 position = rigidbody2D.position;
 
         if (vertical)
         {
             position.y = position.y + Time.deltaTime * speed * direction;
             animator.SetFloat("MoveX", 0);
-            animator.SetFloat("MoveY", direction);
+            if (speed>0){
+                animator.SetFloat("MoveY", direction);
+            }
+            else{
+                animator.SetFloat("MoveY", -direction);
+            }
         }
         else
         {
-            animator.SetFloat("MoveX", direction);
+            if (speed>0){
+                animator.SetFloat("MoveX", direction);
+            }
+            else{
+                animator.SetFloat("MoveX", -direction);
+            }
             animator.SetFloat("MoveY", 0);
             position.x = position.x + Time.deltaTime * speed * direction;
         }

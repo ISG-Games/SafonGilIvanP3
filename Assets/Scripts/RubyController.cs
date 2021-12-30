@@ -6,11 +6,6 @@ using UnityEngine.UI;
 public class RubyController : MonoBehaviour
 {
     public float speed = 20.0f;
-    
-    // public int maxHealth = 5;
-
-    // public int health { get { return currentHealth; }}
-    // int currentHealth;
 
     public GameObject projectilePrefab;
 
@@ -19,8 +14,7 @@ public class RubyController : MonoBehaviour
     Animator animator;
     Vector2 lookDirection = new Vector2(1,0);
 
-    public ParticleSystem particlesDaño;
-    bool level3o4;
+    bool level3;
     int nivelActual;
 
     public bool muerto;
@@ -44,28 +38,14 @@ public class RubyController : MonoBehaviour
 
     void OnEnable(){
         muerto=false;
-        level3o4=false;
+        level3=false;
         nivelActual=MenuScript.levelActual;
-        if(nivelActual==3 || nivelActual==4){
-            level3o4=true;
+        if(nivelActual==3){
+            level3=true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Muerto?
-        if(muerto==true){
-            GameOver.SetActive(true);
-        }
-
-        //Tiempo
-        tiempoActual+=Time.deltaTime;
-        if (tiempoActual>=tiempoMax+0.5f){//tiempoMax+0.5 para que tengas medio segundo más de tiempo del que crees
-            muerto=true;
-        }
-        SetValueTimeBar( (float)(tiempoMax-tiempoActual) / (float)tiempoMax );
-
+    void FixedUpdate(){
         //Movimiento
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -87,9 +67,25 @@ public class RubyController : MonoBehaviour
         position = position + move * speed * Time.deltaTime;
         
         rigidbody2d.MovePosition(position);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Muerto?
+        if(muerto==true){
+            GameOver.SetActive(true);
+        }
+
+        //Tiempo
+        tiempoActual+=Time.deltaTime;
+        if (tiempoActual>=tiempoMax+0.5f){//tiempoMax+0.5 para que tengas medio segundo más de tiempo del que crees
+            muerto=true;
+        }
+        SetValueTimeBar( (float)(tiempoMax-tiempoActual) / (float)tiempoMax );
 
         //Disparar
-        if(level3o4 && Input.GetKeyDown(KeyCode.C))
+        if(level3 && Input.GetKeyDown(KeyCode.Space))
         {
             Launch();
         }
