@@ -42,6 +42,13 @@ public class RubyController : MonoBehaviour
         nivelActual=MenuScript.levelActual;
         if(nivelActual==3){
             level3=true;
+            tiempoMax=30;
+        }
+        else if(nivelActual==2){
+            tiempoMax=20;
+        }
+        else{
+            tiempoMax=25;
         }
     }
 
