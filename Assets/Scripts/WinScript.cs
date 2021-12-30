@@ -17,7 +17,7 @@ public class WinScript : MonoBehaviour
         WHUD.SetActive(false);
 
         puntuacion=ScoreScript.cScore;
-        TscoreWin.text="Score: "+puntuacion+"/10";
+        TscoreWin.text=puntuacion+"/10";
         ScoreScript.winScoreInt=MenuScript.levelActual;
         StartCoroutine("Menu");
     }

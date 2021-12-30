@@ -42,7 +42,7 @@ public class RubyController : MonoBehaviour
         nivelActual=MenuScript.levelActual;
         if(nivelActual==3){
             level3=true;
-            tiempoMax=30;
+            tiempoMax=40;
         }
         else if(nivelActual==2){
             tiempoMax=20;
@@ -86,6 +86,7 @@ public class RubyController : MonoBehaviour
 
         //Tiempo
         tiempoActual+=Time.deltaTime;
+        print(tiempoActual);
         if (tiempoActual>=tiempoMax+0.5f){//tiempoMax+0.5 para que tengas medio segundo más de tiempo del que crees
             muerto=true;
         }
