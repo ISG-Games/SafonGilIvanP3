@@ -19304,8 +19304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 748.4158, y: 199.3283}
+  m_AnchoredPosition: {x: 0, y: -86.39187}
+  m_SizeDelta: {x: 749.6804, y: 275.0915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557828839
 MonoBehaviour:
@@ -19339,13 +19339,19 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Sprites y sonidos de Unity Assets Store> 2D Beginner: Tutorial Resources
-    (https://assetstore.unity.com/packages/templates/tutorials/2d-beginner-tutorial-resources-140167?_ga=2.147165111.1028345340.1640171502-1482885260.1640171502)\n\nTipograf\xEDa
-    de Dafont> Mario Kart DS (https://www.dafont.com/es/mario-kart-ds.font)\n\nImagen
-    de Game Over> Pixabay (https://pixabay.com/es/illustrations/fin-juego-tarjeta-bokeh-jugar-5656173/)\n\nImagen
-    de un hombre (You win)> Freepik> Foto de Personas creado por kroshka__nastya
-    - www.freepik.es (https://www.freepik.es/fotos/personas)"
+    m_LineSpacing: 1.6
+  m_Text: "Tipograf\xEDa de Dafont> Mario Kart DS (https://www.dafont.com/es/mario-kart-ds.font)\nImagen
+    de Game Over> Pixabay (https://pixabay.com/es/illustrations/fin-juego-tarjeta-bokeh-jugar-5656173/)\nImagen
+    de You Win> Freepik> Foto de Personas creado por kroshka__nastya - www.freepik.es
+    (https://www.freepik.es/fotos/personas)\nSprites y imagen del men\xFA> Unity
+    Assets Store> 2D Beginner: Tutorial Resources (https://assetstore.unity.com/packages/templates/tutorials/2d-beginner-tutorial-resources-140167?_ga=2.147165111.1028345340.1640171502-1482885260.1640171502)\nSonido
+    de You Win> Freesound (https://freesound.org/s/495005/)\nSonido de Game Over>
+    Freesound por deleted_user_877451 (https://freesound.org/s/76376/)\nSonido de
+    cuando coges una fruta> Freesound por Taira Komori (https://freesound.org/s/213421/)\nM\xFAsica
+    en bucle del men\xFA> Freesound (https://freesound.org/s/324377/)\nM\xFAsica
+    nivel 1> Freesound por DominikBraun (https://freesound.org/s/483502/)\nM\xFAsica
+    nivel 2> Freesound por LukeSharples (https://freesound.org/s/145607/)\nM\xFAsica
+    nivel 3> Freesound por BloodPixelHero (https://freesound.org/s/507767/)"
 --- !u!222 &557828840
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34385,7 +34391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60}
+  m_AnchoredPosition: {x: 0, y: 80}
   m_SizeDelta: {x: 778.0482, y: 159.8183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573715377
