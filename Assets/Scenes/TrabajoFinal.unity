@@ -19261,7 +19261,7 @@ MonoBehaviour:
     Small Bar: Fruits
     you have collected
 
-'
+    Touch the Frog to Win'
 --- !u!222 &547314565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20581,7 +20581,7 @@ MonoBehaviour:
   m_Text: "WASD / Arrows          Move\nSpace          Shoot                                                        
     level 3\nCollect                           Fruits                           \nBig
     Bar:              Time                               \nSmall Bar: Fruits                                                                   
-    \n"
+    \n                                    Frog          Win"
 --- !u!222 &704400939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34893,7 +34893,7 @@ MonoBehaviour:
   m_Text: "                                to\n                     to                      
     the robots/only                         \n                             all the                        
     you can\n                            the                 you have\n                                                              
-    you have collected\n"
+    you have collected\nTouch the                  to            "
 --- !u!222 &1658947817
 CanvasRenderer:
   m_ObjectHideFlags: 0
