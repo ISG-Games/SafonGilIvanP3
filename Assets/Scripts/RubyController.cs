@@ -86,7 +86,6 @@ public class RubyController : MonoBehaviour
 
         //Tiempo
         tiempoActual+=Time.deltaTime;
-        print(tiempoActual);
         if (tiempoActual>=tiempoMax+0.5f){//tiempoMax+0.5 para que tengas medio segundo más de tiempo del que crees
             muerto=true;
         }

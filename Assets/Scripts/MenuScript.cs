@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class MenuScript : MonoBehaviour
     public GameObject HUD;
 
     public static int levelActual;
+    public Text MuteText;
+    public GameObject HowTo;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,14 @@ public class MenuScript : MonoBehaviour
             Level3.SetActive(true);
             EntrarACualquierNivel();
         }
+        if (PlayerPrefs.GetInt("Mute")==0){
+            AudioListener.volume=1;
+            MuteText.text="Volume: On";
+        }
+        else{
+            AudioListener.volume=0;
+            MuteText.text="Volume: Off";
+        }
     }
 
     public void IrALevel1(){
@@ -54,13 +65,25 @@ public class MenuScript : MonoBehaviour
     public void IrACredits(){
         Creditos.SetActive(true);
     }
+    public void irAHowToPlay(){ 
+        HowTo.SetActive(true);
+    }
     public void IrAMenu(){
         Creditos.SetActive(false);
+        HowTo.SetActive(false);
     }
 
     void EntrarACualquierNivel(){
         HUD.SetActive(true);
         AllLevels.SetActive(true);
         gameObject.SetActive(false);
+    }
+    public void MuteBoton(){
+        if (PlayerPrefs.GetInt("Mute")==0){
+            PlayerPrefs.SetInt("Mute",1);
+        }
+        else{
+            PlayerPrefs.SetInt("Mute",0);
+        }
     }
 }
