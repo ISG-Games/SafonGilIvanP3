@@ -1,2 +1,3 @@
-# SafonGilIvan_TrabajoFinal_InfBasica-VJ1202
- Creado por Iván Safón Gil
+# VJ1202 Informática Básica
+## Examen Final Pregunta 3(Videojuego)
+### Iván Safón
